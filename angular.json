@@ -105,6 +105,37 @@
           }
         }
       }
+    },
+    "@deweppro/core": {
+      "projectType": "library",
+      "root": "projects/deweppro/core",
+      "sourceRoot": "projects/deweppro/core/src",
+      "prefix": "dui",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/deweppro/core/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/deweppro/core/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/deweppro/core/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/deweppro/core/src/test.ts",
+            "tsConfig": "projects/deweppro/core/tsconfig.spec.json",
+            "karmaConfig": "projects/deweppro/core/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "ui-core"
