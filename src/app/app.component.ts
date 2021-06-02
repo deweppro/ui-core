@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ui-core';
+  title = 'AAAA'.repeat(100);
+  value = 'BBBB'.repeat(100);
+  regex = new RegExp('[^0-9]', 'gi');
 }

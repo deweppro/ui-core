@@ -1,11 +1,14 @@
 {
   "name": "@deweppro/core",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "peerDependencies": {
     "@angular/common": "^12.0.2",
-    "@angular/core": "^12.0.2"
+    "@angular/core": "^12.0.2",
+    "rxjs": "~6.6.0"
   },
   "dependencies": {
     "tslib": "^2.1.0"
-  }
+  },
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/deweppro/ui-core/tree/master/projects/deweppro/core"
 }
