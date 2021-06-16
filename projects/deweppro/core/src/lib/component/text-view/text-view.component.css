@@ -1,5 +1,29 @@
-/**
- * Copyright 2021 Mikhail Knyazhev <markus621@gmail.com>. All rights reserved.
- * Use of this source code is governed by a BSD-style
- * license that can be found in the LICENSE file.
- */
+:host {
+  display: block;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: .3rem .5rem;
+}
+
+div {
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  color: #000000;
+}
+
+span {
+  display: block;
+  font-size: 0.8rem;
+  margin-top: -0.1rem;
+  color: #6b6b6b;
+  width: 80%;
+  overflow: hidden;
+  text-decoration: none;
+  white-space: nowrap;
+  background: linear-gradient(45deg, #6b6b6b 70%, #c7c7c7 80%, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

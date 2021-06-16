@@ -1,1 +1,19 @@
-<p>select-box works!</p>
+<span [title]="title" *ngIf="title.length > 0">{{title}}</span>
+
+<div class="main-box">
+  <input [disabled]="true" type="text" [ngModel]="data|keyGetter:default" [placeholder]="'choose ...'">
+</div>
+
+<div *ngIf="_popup" class="box-popup">
+
+  <div class="box-popup-search">
+    <input type="text" [(ngModel)]="default" placeholder="filter ...">
+  </div>
+
+  <div class="box-popup-list">
+    <div class="click box-popup-item" *ngFor="let item of data|keysFilter:default" (click)="push(item)">
+      {{item}}
+    </div>
+  </div>
+
+</div>

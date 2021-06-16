@@ -1,0 +1,89 @@
+:host {
+  display: block;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: .3rem .5rem;
+  position: relative;
+}
+
+span {
+  display: block;
+  font-size: 0.8rem;
+  margin-top: -0.1rem;
+  color: #6b6b6b;
+  width: 80%;
+  overflow: hidden;
+  text-decoration: none;
+  white-space: nowrap;
+  background: linear-gradient(45deg, #6b6b6b 70%, #c7c7c7 80%, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main-box, .box-popup-search {
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.main-box>input:disabled {
+  background-color: transparent;
+  color: #000000;
+}
+
+.click {
+  cursor: pointer;
+}
+
+.box-popup {
+  display: block;
+  box-sizing: content-box;
+  border: 1px solid gray;
+  border-radius: 5px;
+  z-index: 999999999;
+  width: 95%;
+  background-clip: padding-box;
+  background: #ffffff;
+  position: absolute;
+  top: 1.2rem;
+}
+
+.box-popup-search {
+  border-bottom: 1px dotted gray;
+}
+
+.box-popup-search>input {
+  margin: .3rem;
+}
+
+.box-popup-list {
+  padding: .5rem;
+  max-height: 15vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.box-popup-list::-webkit-scrollbar {
+  width: 0.1rem;
+}
+
+.box-popup-list::-webkit-scrollbar-thumb {
+  background-color: gray;
+  outline: 1px solid gray;
+}
+
+.box-popup-item {
+  white-space: nowrap;
+  margin-bottom: 3px;
+  color: #000000;
+}
+
+.box-popup-item:hover {
+  font-weight: bolder;
+}

@@ -1,13 +1,11 @@
 :host {
   display: block;
-  position: relative;
   border: 1px solid gray;
   border-radius: 5px;
   padding: .3rem .5rem;
 }
 
 div {
-  display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row;
   flex-direction: row;
@@ -17,6 +15,7 @@ div>input {
   width: 100%;
   border: none;
   outline: none;
+  color: #000000;
 }
 
 span {
@@ -26,6 +25,8 @@ span {
   color: #6b6b6b;
   width: 80%;
   overflow: hidden;
+  text-decoration: none;
+  white-space: nowrap;
   background: linear-gradient(45deg, #6b6b6b 70%, #c7c7c7 80%, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

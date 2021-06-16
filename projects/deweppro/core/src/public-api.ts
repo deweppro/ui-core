@@ -10,3 +10,5 @@ export * from './lib/component/select-box/select-box.component';
 
 export * from './lib/service/error.interceptor';
 export * from './lib/service/request.service';
+
+export * from './lib/pipe/filters.pipe';

@@ -7,12 +7,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ErrorInterceptor } from './service/error.interceptor';
 import { RequestService } from './service/request.service';
+import { KeyGetterPipe, KeysFilterPipe } from './pipe/filters.pipe';
 
 @NgModule({
   declarations: [
     InputBoxComponent,
     TextViewComponent,
-    SelectBoxComponent
+    SelectBoxComponent,
+    KeysFilterPipe,
+    KeyGetterPipe,
   ],
   imports: [
     CommonModule,
@@ -22,7 +25,9 @@ import { RequestService } from './service/request.service';
   exports: [
     InputBoxComponent,
     TextViewComponent,
-    SelectBoxComponent
+    SelectBoxComponent,
+    KeysFilterPipe,
+    KeyGetterPipe,
   ]
 })
 export class DuiCoreModule {

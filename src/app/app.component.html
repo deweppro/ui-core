@@ -1,7 +1,25 @@
-<h1>input box</h1>
-<dui-input-box [title]="title" [(value)]="value" [regex]="regex"></dui-input-box>
-<hr>
+<div class="row">
 
-<h1>text view</h1>
-<dui-text-view [title]="title" [value]="value"></dui-text-view>
-<hr>
+  <div class="col">
+    <h1>input box</h1>
+    <dui-input-box [title]="title" [(value)]="value" [regex]="regex"></dui-input-box>
+  </div>
+
+  <div class="col">
+    <h1>text view</h1>
+    <dui-text-view [title]="title" [value]="value"></dui-text-view>
+  </div>
+
+  <div class="col">
+    <h1>select box</h1>
+    <dui-select-box [title]="title" [data]="selectList" [default]="selectDefault" (key)="debug($event)"
+      (value)="debug($event)">
+    </dui-select-box>
+  </div>
+
+  <div class="col"> </div>
+  <div class="col"> </div>
+  <div class="col"> </div>
+  <div class="col"> </div>
+
+</div>
