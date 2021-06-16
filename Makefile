@@ -11,3 +11,6 @@ service:
 pipe:
 	ng g pipe pipe/$(RUN_ARGS) --project=@deweppro/core
 
+publish:
+	npm run version-patch
+	npm run publish
