@@ -12,3 +12,4 @@ export * from './lib/service/error.interceptor';
 export * from './lib/service/request.service';
 
 export * from './lib/pipe/filters.pipe';
+export * from './lib/pipe/validators.pipe';

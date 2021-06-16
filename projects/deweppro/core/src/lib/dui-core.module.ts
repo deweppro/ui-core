@@ -8,6 +8,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ErrorInterceptor } from './service/error.interceptor';
 import { RequestService } from './service/request.service';
 import { KeyGetterPipe, KeysFilterPipe } from './pipe/filters.pipe';
+import { RTLPipe } from './pipe/validators.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { KeyGetterPipe, KeysFilterPipe } from './pipe/filters.pipe';
     SelectBoxComponent,
     KeysFilterPipe,
     KeyGetterPipe,
+    RTLPipe,
   ],
   imports: [
     CommonModule,
@@ -28,6 +30,7 @@ import { KeyGetterPipe, KeysFilterPipe } from './pipe/filters.pipe';
     SelectBoxComponent,
     KeysFilterPipe,
     KeyGetterPipe,
+    RTLPipe,
   ]
 })
 export class DuiCoreModule {
