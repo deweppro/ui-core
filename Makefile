@@ -14,3 +14,9 @@ pipe:
 publish:
 	npm run version-patch
 	npm run publish
+
+build_demo:
+	npm run build
+	rm -rf ./docs
+	mkdir ./docs
+	cp -r ./dist/ui-core/. ./docs/
