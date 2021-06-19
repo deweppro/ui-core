@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href='https://deweppro.github.io/ui-core/'",
     "watch": "ng build --watch --configuration development",
     "build-lib": "ng build @deweppro/core",
     "pack-lib": "cd dist/deweppro/core && npm pack",
