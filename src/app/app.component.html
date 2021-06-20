@@ -2,24 +2,42 @@
 
   <div class="col">
     <h1>input box</h1>
-    <dui-input-box [title]="title" [(value)]="value" [regex]="regex"></dui-input-box>
+    <dui-input-box [title]="title" [(value)]="valueNum" [regex]="regex"></dui-input-box>
   </div>
 
   <div class="col">
     <h1>text view</h1>
-    <dui-text-view [title]="title" [value]="value"></dui-text-view>
+    <dui-text-view [title]="title" [value]="valueText"></dui-text-view>
   </div>
 
   <div class="col">
     <h1>select box</h1>
-    <dui-select-box [title]="title" [data]="selectList" [default]="selectDefault" (key)="debug($event)"
+    <dui-select-box [title]="title" [data]="selectList" [filter]="selectDefault" (key)="debug($event)"
       (value)="debug($event)">
     </dui-select-box>
   </div>
 
-  <div class="col"> </div>
-  <div class="col"> </div>
-  <div class="col"> </div>
+  <div class="col">
+    <h1>tabs</h1>
+    <dui-tabs [tab]="'tab 2'">
+      <div [attr.data-tab]="'tab 1'" #tabItem> Tab #1 </div>
+      <div [attr.data-tab]="'tab 2'" #tabItem> Tab #2 </div>
+      <div [attr.data-tab]="'tab 3'" #tabItem> Tab #3 </div>
+    </dui-tabs>
+  </div>
+
+  <div class="col">
+    <h1>check box</h1>
+    <dui-check-box [(value)]="valueBool" [title]="title"></dui-check-box>
+    <dui-check-box [(value)]="valueBool" [title]="title"></dui-check-box>
+    <dui-check-box [(value)]="valueBool" [title]="title"></dui-check-box>
+  </div>
+
+  <div class="col">
+    <h1>switch box</h1>
+    <dui-switch-box [data]="selectList" (value)="debug($event)" [title]="title"></dui-switch-box>
+  </div>
+
   <div class="col"> </div>
 
 </div>

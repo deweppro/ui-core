@@ -1,0 +1,39 @@
+:host {
+  display: flex;
+  padding: .3rem .5rem;
+}
+
+span {
+  display: block;
+  padding-left: .5rem;
+  float: left;
+}
+
+.box {
+  border: 1px solid gray;
+  border-radius: 5px;
+  width: 2.5rem;
+  display: block;
+  float: left;
+}
+
+.box>div {
+  border: 0px;
+  border-radius: 5px;
+  padding: .5rem;
+  width: .5rem;
+}
+
+.box-on {
+  margin-left: 1rem;
+  background-color: gray;
+}
+
+.box-off {
+  margin-left: 0;
+  background-color: lightgrey;
+}
+
+.click {
+  cursor: pointer;
+}

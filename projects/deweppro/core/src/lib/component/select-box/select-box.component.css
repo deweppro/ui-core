@@ -11,13 +11,16 @@ span {
   font-size: 0.8rem;
   margin-top: -0.1rem;
   color: #6b6b6b;
-  width: 80%;
   overflow: hidden;
   text-decoration: none;
   white-space: nowrap;
   background: linear-gradient(45deg, #6b6b6b 70%, #c7c7c7 80%, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+:host>span {
+  width: 80%;
 }
 
 .main-box, .box-popup-search {
@@ -58,8 +61,14 @@ input {
   border-bottom: 1px dotted gray;
 }
 
-.box-popup-search>input {
+.box-popup-search>span {
   margin: .3rem;
+  width: 100%;
+}
+
+.box-popup-search>span>input {
+  -webkit-text-fill-color: #000000;
+  width: 80%;
 }
 
 .box-popup-list {
@@ -70,7 +79,7 @@ input {
 }
 
 .box-popup-list::-webkit-scrollbar {
-  width: 0.1rem;
+  width: .1rem;
 }
 
 .box-popup-list::-webkit-scrollbar-thumb {

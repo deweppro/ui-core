@@ -9,12 +9,18 @@ import { ErrorInterceptor } from './service/error.interceptor';
 import { RequestService } from './service/request.service';
 import { KeyGetterPipe, KeysFilterPipe } from './pipe/filters.pipe';
 import { RTLPipe } from './pipe/validators.pipe';
+import { TabsComponent } from './component/tabs/tabs.component';
+import { CheckBoxComponent } from './component/check-box/check-box.component';
+import { SwitchBoxComponent } from './component/switch-box/switch-box.component';
 
 @NgModule({
   declarations: [
     InputBoxComponent,
     TextViewComponent,
     SelectBoxComponent,
+    TabsComponent,
+    CheckBoxComponent,
+    SwitchBoxComponent,
     KeysFilterPipe,
     KeyGetterPipe,
     RTLPipe,
@@ -28,6 +34,9 @@ import { RTLPipe } from './pipe/validators.pipe';
     InputBoxComponent,
     TextViewComponent,
     SelectBoxComponent,
+    TabsComponent,
+    CheckBoxComponent,
+    SwitchBoxComponent,
     KeysFilterPipe,
     KeyGetterPipe,
     RTLPipe,

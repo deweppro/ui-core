@@ -1,6 +1,17 @@
 {
   "name": "@deweppro/core",
-  "version": "0.0.5",
+  "version": "0.0.6",
+  "description": "UI components for the angular",
+  "author": "Mikhail Knyazhev <markus621+npm@gmail.com> (https://github.com/markus621)",
+  "keywords": [
+    "angular",
+    "bootstrap",
+    "ng",
+    "ng2",
+    "angular2",
+    "ui",
+    "web-components"
+  ],
   "peerDependencies": {
     "@angular/common": "^12.0.2",
     "@angular/core": "^12.0.2",
@@ -10,5 +21,9 @@
     "tslib": "^2.1.0"
   },
   "license": "BSD-3-Clause",
-  "homepage": "https://github.com/deweppro/ui-core/tree/master/projects/deweppro/core"
+  "homepage": "https://github.com/deweppro/ui-core/tree/master/projects/deweppro/core",
+  "funding": "https://sobe.ru/na/deweppro",
+  "bugs": {
+    "url": "https://github.com/deweppro/ui-core/issues"
+  }
 }

@@ -10,7 +10,7 @@ export class SelectBoxComponent implements OnInit {
   _popup = false;
 
   @Input() title: string = '';
-  @Input() default: string = '';
+  @Input() filter: string = '';
   @Input() data: { [title: string]: any } = {};
 
   @Output() key = new EventEmitter<string>();
@@ -27,8 +27,8 @@ export class SelectBoxComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  push(key: string): void {
-    this.default = key;
+  setValue(key: string): void {
+    this.filter = key;
     this.key.emit(key);
     this.value.emit(this.data[key]);
   }

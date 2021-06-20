@@ -1,0 +1,7 @@
+<div class="tabs">
+  <div *ngFor="let item of tabs" class="click tab-item" [ngClass]="{'tab-active': tab === item}" (click)="setTab(item)">
+    {{item}}
+  </div>
+</div>
+<hr>
+<div #content></div>

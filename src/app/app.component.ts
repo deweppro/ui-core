@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Что такое Lorem Ipsum?';
-  value = 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.';
+  valueText = 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.';
+  valueNum = '621';
+  valueBool = false;
   regex = new RegExp('[^0-9]', 'gi');
 
   selectList: { [title: string]: any } = {
@@ -26,7 +28,7 @@ export class AppComponent {
     'key 13': false,
     'key 14': false,
   }
-  selectDefault = 'key';
+  selectDefault = '2';
 
   debug(msg: any): void {
     console.log(msg);

@@ -1,0 +1,5 @@
+<span [title]="title" *ngIf="title.length > 0">{{title}}</span>
+
+<div class="click switch-item" *ngFor="let item of data|keysFilter:''" (click)="setValue(item)">
+  <div class="box" [ngClass]="{'box-on': _key === item}"></div> {{item}}
+</div>

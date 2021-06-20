@@ -1,0 +1,4 @@
+<div class="box click" (click)="toggle(!value)">
+  <div [ngClass]="{'box-on': value, 'box-off': !value }"></div>
+</div>
+<span [title]="title" *ngIf="title.length > 0">{{title}}</span>

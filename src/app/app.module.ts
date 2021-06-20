@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    DuiCoreModule,
+    DuiCoreModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,16 +7,29 @@
 }
 
 div {
-  display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row;
+  color: #000000;
+  font-size: 0.8rem;
 }
 
-div>input {
-  width: 100%;
-  border: none;
-  outline: none;
-  color: #000000;
+.switch-item {
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  margin: .3rem;
+}
+
+.box {
+  display: block;
+  border: 1px solid gray;
+  border-radius: .5rem;
+  padding: .4rem;
+  margin-right: 0.3rem;
+}
+
+.box-on {
+  background-color: gray;
 }
 
 span {
@@ -31,4 +44,8 @@ span {
   background: linear-gradient(45deg, #6b6b6b 70%, #c7c7c7 80%, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.click {
+  cursor: pointer;
 }
