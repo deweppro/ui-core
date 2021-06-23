@@ -1,4 +1,7 @@
-<div class="box click" (click)="toggle(!value)">
-  <div [ngClass]="{'box-on': value, 'box-off': !value }"></div>
+<div class="dui-check-box__container">
+  <div class="dui-check-box__container-button click" (click)="toggle(!value)">
+    <div [ngClass]="{'dui-check-box__container-button--on': value, 'dui-check-box__container-button--off': !value }">
+    </div>
+  </div>
+  <span class="dui-check-box__container-title" [title]="title" *ngIf="title.length > 0">{{title}}</span>
 </div>
-<span [title]="title" *ngIf="title.length > 0">{{title}}</span>

@@ -1,7 +1,8 @@
-<div class="tabs">
-  <div *ngFor="let item of tabs" class="click tab-item" [ngClass]="{'tab-active': tab === item}" (click)="setTab(item)">
+<div class="dui-tabs__container">
+  <div *ngFor="let item of tabs" class="click dui-tabs__container-item"
+    [ngClass]="{'dui-tabs__container-item--active': tab === item}" (click)="setTab(item)">
     {{item}}
   </div>
 </div>
-<hr>
-<div #content></div>
+<hr class="dui-tabs__horizontal-line">
+<div class="dui-tabs__content" #content></div>

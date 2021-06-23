@@ -6,29 +6,46 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Что такое Lorem Ipsum?';
-  valueText = 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.';
+  title = 'text text text text text text text text text text text text text text';
+  valueText = 'text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text';
   valueNum = '621';
   valueBool = false;
   regex = new RegExp('[^0-9]', 'gi');
 
   selectList: { [title: string]: any } = {
-    'key 1': 123,
-    'key 2': 'hello',
-    'key 3': false,
-    'key 4': false,
-    'key 5': false,
-    'key 6': false,
-    'key 7': false,
-    'key 8': false,
-    'key 9': false,
-    'key 10': false,
-    'key 11': false,
-    'key 12': false,
-    'key 13': false,
-    'key 14': false,
+    'text 1': 123,
+    'text 2': 'hello',
+    'text 3': false,
+    'text 4': false,
+    'text 5': false,
+    'text 6': false,
+    'text 7': false,
+    'text 8': false,
+    'text 9': false,
+    'text 10': false,
+    'text 11': false,
+    'text 12': false,
+    'text 13': false,
+    'text 14': false,
   }
   selectDefault = '2';
+
+  tmpls: { [key: string]: string } = {
+    'dui-input-box': `<dui-input-box [title] [(value)] [regex]></dui-input-box>`,
+    'dui-text-view': `<dui-text-view [title] [value]></dui-text-view>`,
+    'dui-select-box': `data = { [title: string]: any }
+
+    <dui-select-box [title] [data] [filter] (key) (value)></dui-select-box>`,
+    'dui-tabs': `<dui-tabs [tab]="'tab2'">
+    <div [attr.data-tab]="'tab1'" #tabItem>#1</div>
+    <div [attr.data-tab]="'tab2'" #tabItem>#2</div>
+    <div [attr.data-tab]="'tab3'" #tabItem>#3</div>
+  </dui-tabs>`,
+    'dui-check-box': `<dui-check-box [title] [(value)]></dui-check-box>`,
+    'dui-switch-box': `data = { [title: string]: any }
+
+    <dui-switch-box [title] [data] (key) (value)></dui-switch-box>`,
+  }
 
   debug(msg: any): void {
     console.log(msg);

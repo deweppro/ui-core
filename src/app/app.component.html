@@ -3,11 +3,15 @@
   <div class="col">
     <h1>input box</h1>
     <dui-input-box [title]="title" [(value)]="valueNum" [regex]="regex"></dui-input-box>
+
+    <code [innerText]="tmpls['dui-input-box']"></code>
   </div>
 
   <div class="col">
     <h1>text view</h1>
     <dui-text-view [title]="title" [value]="valueText"></dui-text-view>
+
+    <code [innerText]="tmpls['dui-text-view']"></code>
   </div>
 
   <div class="col">
@@ -15,6 +19,8 @@
     <dui-select-box [title]="title" [data]="selectList" [filter]="selectDefault" (key)="debug($event)"
       (value)="debug($event)">
     </dui-select-box>
+
+    <code [innerText]="tmpls['dui-select-box']"></code>
   </div>
 
   <div class="col">
@@ -24,6 +30,8 @@
       <div [attr.data-tab]="'tab 2'" #tabItem> Tab #2 </div>
       <div [attr.data-tab]="'tab 3'" #tabItem> Tab #3 </div>
     </dui-tabs>
+
+    <code [innerText]="tmpls['dui-tabs']"></code>
   </div>
 
   <div class="col">
@@ -31,11 +39,15 @@
     <dui-check-box [(value)]="valueBool" [title]="title"></dui-check-box>
     <dui-check-box [(value)]="valueBool" [title]="title"></dui-check-box>
     <dui-check-box [(value)]="valueBool" [title]="title"></dui-check-box>
+
+    <code [innerText]="tmpls['dui-check-box']"></code>
   </div>
 
   <div class="col">
     <h1>switch box</h1>
     <dui-switch-box [data]="selectList" (value)="debug($event)" [title]="title"></dui-switch-box>
+
+    <code [innerText]="tmpls['dui-switch-box']"></code>
   </div>
 
   <div class="col"> </div>

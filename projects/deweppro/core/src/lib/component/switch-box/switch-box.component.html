@@ -1,5 +1,6 @@
-<span [title]="title" *ngIf="title.length > 0">{{title}}</span>
+<span class="dui-switch-box__title" [title]="title" *ngIf="title.length > 0">{{title}}</span>
 
-<div class="click switch-item" *ngFor="let item of data|keysFilter:''" (click)="setValue(item)">
-  <div class="box" [ngClass]="{'box-on': _key === item}"></div> {{item}}
+<div class="click dui-switch-box__switch-item" *ngFor="let item of data|keysFilter:''" (click)="setValue(item)">
+  <div class="dui-switch-box__switch-buttom" [ngClass]="{'dui-switch-box__switch-buttom--on': _key === item}"></div>
+  <span class="dui-switch-box__switch-content">{{item}}</span>
 </div>

@@ -1,33 +1,34 @@
 :host {
   display: block;
   position: relative;
+  padding: var(--dui-padding);
 }
 
 .click {
   cursor: pointer;
 }
 
-.tabs {
+.dui-tabs__container {
   display: flex;
   flex-flow: row wrap;
 }
 
-.tab-item {
-  margin: 0 .1rem 0 0;
-  padding: .2rem .4rem;
-  border: 1px solid gray;
+.dui-tabs__container-item {
+  margin: var(--dui-margin) 0 0;
+  padding: var(--dui-padding);
+  border: var(--dui-border-size) var(--dui-border-style) var(--dui-border-color);
   border-bottom: 0;
-  border-radius: 5px 5px 0 0;
-  color: gray;
+  border-radius: var(--dui-border-radius) var(--dui-border-radius) 0 0;
+  color: var(--dui-font-second-color);
+  font-size: var(--dui-font-second-size);
 }
 
-.tab-active {
-  color: #000000;
-  font-weight: bold;
+.dui-tabs__container-item--active {
+  font-weight: var(--dui-font-weight);
 }
 
-hr {
-  border-top: 1px dotted gray;
+.dui-tabs__horizontal-line {
+  border-top: var(--dui-border-size) var(--dui-border-style) var(--dui-border-color);
   margin-top: 0;
   padding-top: 0;
 }

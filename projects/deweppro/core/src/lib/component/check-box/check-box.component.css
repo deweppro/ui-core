@@ -1,37 +1,46 @@
 :host {
-  display: flex;
-  padding: .3rem .5rem;
-}
-
-span {
   display: block;
-  padding-left: .5rem;
-  float: left;
+  position: relative;
+  padding: var(--dui-padding);
 }
 
-.box {
-  border: 1px solid gray;
-  border-radius: 5px;
+.dui-check-box__container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.dui-check-box__container-title {
+  display: block;
+  padding-left: var(--dui-padding-horizontal);
+  position: relative;
+  font-size: var(--dui-font-primary-size);
+  color: var(--dui-font-primary-color);
+}
+
+.dui-check-box__container-button {
+  border: var(--dui-border-size) var(--dui-border-style) var(--dui-border-color);
+  border-radius: var(--dui-border-radius);
   width: 2.5rem;
   display: block;
-  float: left;
+  position: relative;
 }
 
-.box>div {
+.dui-check-box__container-button--on, .dui-check-box__container-button--off {
   border: 0px;
-  border-radius: 5px;
-  padding: .5rem;
+  border-radius: var(--dui-border-radius);
+  padding: var(--dui-padding-horizontal);
   width: .5rem;
 }
 
-.box-on {
+.dui-check-box__container-button--on {
   margin-left: 1rem;
-  background-color: gray;
+  background-color: var(--dui-background-second-color);
 }
 
-.box-off {
-  margin-left: 0;
-  background-color: lightgrey;
+.dui-check-box__container-button--off {
+  margin-right: 1rem;
+  background-color: var(--dui-background-third-color);
 }
 
 .click {

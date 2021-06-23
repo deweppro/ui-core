@@ -16,6 +16,12 @@ _**The project is currently under development, and we recommend testing the comp
 
 ## Examples
 
+`styles.scss`
+
+```css
+@import "@deweppro/core/styles/base.css";
+```
+
 `app.module.ts`
 
 ```js

@@ -1,34 +1,35 @@
 :host {
   display: block;
-  border: 1px solid gray;
-  border-radius: 5px;
-  padding: .3rem .5rem;
   position: relative;
+  border: var(--dui-border-size) var(--dui-border-style) var(--dui-border-color);
+  border-radius: var(--dui-border-radius);
+  padding: var(--dui-padding);
 }
 
-div {
+.dui-check-box__contianer {
   display: flex;
   -webkit-flex-direction: row;
   flex-direction: row;
 }
 
-div>input {
+.dui-check-box__contianer-input {
   width: 100%;
   border: none;
   outline: none;
-  color: #000000;
+  color: var(--dui-font-primary-color);
+  font-size: var(--dui-font-primary-size);
 }
 
-span {
+.dui-check-box__title {
   display: block;
-  font-size: 0.8rem;
-  margin-top: -0.1rem;
-  color: #6b6b6b;
+  font-size: var(--dui-font-second-size);
+  margin-top: -.1rem;
+  color: var(--dui-font-second-color);
   width: 80%;
   overflow: hidden;
   text-decoration: none;
   white-space: nowrap;
-  background: linear-gradient(45deg, #6b6b6b 70%, #c7c7c7 80%, #ffffff);
-  -webkit-background-clip: text;
+  background: linear-gradient(45deg, var(--dui-font-second-color) 70%, var(--dui-background-color));
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }

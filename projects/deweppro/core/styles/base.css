@@ -1,0 +1,27 @@
+:root {
+  /** **/
+  --dui-border-size: 1px;
+  --dui-border-style: solid;
+  --dui-border-color: #6b6b6b;
+  --dui-border-radius: .5rem;
+  /** **/
+  --dui-padding: .3rem .5rem;
+  --dui-padding-horizontal: .5rem;
+  --dui-padding-vertical: .3rem;
+  --dui-margin: .3rem .5rem;
+  --dui-margin-horizontal: .5rem;
+  --dui-margin-vertical: .3rem;
+  /** **/
+  --dui-background-color: #ffffff;
+  --dui-background-primary-color: #000000;
+  --dui-background-second-color: #6b6b6b;
+  --dui-background-third-color: #d3d3d3;
+  --dui-scrollbar-size: .1rem;
+  --dui-scrollbar-color: #6b6b6b;
+  /** **/
+  --dui-font-weight: bolder;
+  --dui-font-primary-color: #000000;
+  --dui-font-primary-size: 1rem;
+  --dui-font-second-color: #6b6b6b;
+  --dui-font-second-size: 0.8rem;
+}

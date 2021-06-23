@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { DuiCoreModule } from 'projects/deweppro/core/src/public-api';
+import { DuiCoreModule } from '@deweppro/core';
 
 import { AppComponent } from './app.component';
 
