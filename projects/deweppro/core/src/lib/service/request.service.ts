@@ -4,45 +4,41 @@ import { Observable } from 'rxjs';
 import { take } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class RequestService {
+  constructor(protected http: HttpClient) {}
 
-  constructor(
-    protected http: HttpClient,
-  ) { }
-
-  get(url: string, data?: object): Promise<any> {
-    return this._promise(this.http.get<any>(this._query(url, data), { headers: this._headers(data) }));
+  get(url: string, data?: object): Observable<any> {
+    return this._observable(
+      this.http.get<any>(this._query(url, data), {
+        headers: this._headers(data),
+      })
+    );
   }
 
-  post(url: string, data: object): Promise<any> {
-    return this._promise(this.http.post<any>(url, data, { headers: this._headers(data) }));
+  post(url: string, data: object): Observable<any> {
+    return this._observable(
+      this.http.post<any>(url, data, { headers: this._headers(data) })
+    );
   }
 
-  put(url: string, data: object): Promise<any> {
-    return this._promise(this.http.put<any>(url, data, { headers: this._headers(data) }));
+  put(url: string, data: object): Observable<any> {
+    return this._observable(
+      this.http.put<any>(url, data, { headers: this._headers(data) })
+    );
   }
 
-  delete(url: string, data?: object): Promise<any> {
-    return this._promise(this.http.delete<any>(this._query(url, data), { headers: this._headers(data) }));
+  delete(url: string, data?: object): Observable<any> {
+    return this._observable(
+      this.http.delete<any>(this._query(url, data), {
+        headers: this._headers(data),
+      })
+    );
   }
 
-  private _promise(obs: Observable<any>): Promise<any> {
-    return new Promise((resolve, reject) => {
-      const sub = obs
-        .pipe(
-          take(1)
-        ).subscribe(
-          (data: any) => {
-            resolve(data);
-          },
-          (err) => {
-            reject(err);
-          }
-        );
-
-    });
+  private _observable(obs: Observable<any>): Observable<any> {
+    return obs.pipe(take(1));
   }
 
   private _query(url: string, data?: object): string {

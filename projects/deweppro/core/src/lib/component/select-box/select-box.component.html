@@ -1,22 +1,35 @@
-<span class="dui-select-box__title" [title]="title" *ngIf="title.length > 0">{{title}}</span>
+<span class="dui-select-box__title" [title]="title" *ngIf="title.length > 0">{{
+  title
+}}</span>
 
 <div class="dui-select-box__container">
-  <input class="dui-select-box__container-input" [disabled]="true" type="text" [ngModel]="data|keyGetter:filter"
-    [placeholder]="'choose ...'">
+  <input
+    class="dui-select-box__container-input"
+    [disabled]="true"
+    type="text"
+    [ngModel]="data | keyGetter: filter"
+    [placeholder]="'choose ...'"
+  />
 </div>
 
 <div *ngIf="_popup" class="dui-select-box__popup">
-
   <div class="dui-select-box__popup-search">
-    <span class="dui-select-box__popup-search-title">Filter: <input class="dui-select-box__popup-search-input"
-        type="text" [(ngModel)]="filter"></span>
+    <span class="dui-select-box__popup-search-title"
+      >Filter:
+      <input
+        class="dui-select-box__popup-search-input"
+        type="text"
+        [(ngModel)]="filter"
+    /></span>
   </div>
 
   <div class="dui-select-box__popup-list">
-    <div class="click dui-select-box__popup-list-item" *ngFor="let item of data|keysFilter:filter"
-      (click)="setValue(item)">
-      {{item}}
+    <div
+      class="click dui-select-box__popup-list-item"
+      *ngFor="let item of data | keysFilter: filter"
+      (click)="setValue(item)"
+    >
+      {{ item }}
     </div>
   </div>
-
 </div>

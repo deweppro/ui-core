@@ -1,8 +1,11 @@
 <div class="row">
-
   <div class="col">
     <h1>input box</h1>
-    <dui-input-box [title]="title" [(value)]="valueNum" [regex]="regex"></dui-input-box>
+    <dui-input-box
+      [title]="title"
+      [(value)]="valueNum"
+      [regex]="regex"
+    ></dui-input-box>
 
     <code [innerText]="tmpls['dui-input-box']"></code>
   </div>
@@ -16,8 +19,13 @@
 
   <div class="col">
     <h1>select box</h1>
-    <dui-select-box [title]="title" [data]="selectList" [filter]="selectDefault" (key)="debug($event)"
-      (value)="debug($event)">
+    <dui-select-box
+      [title]="title"
+      [data]="selectList"
+      [filter]="selectDefault"
+      (key)="debug($event)"
+      (value)="debug($event)"
+    >
     </dui-select-box>
 
     <code [innerText]="tmpls['dui-select-box']"></code>
@@ -26,9 +34,9 @@
   <div class="col">
     <h1>tabs</h1>
     <dui-tabs [tab]="'tab 2'">
-      <div [attr.data-tab]="'tab 1'" #tabItem> Tab #1 </div>
-      <div [attr.data-tab]="'tab 2'" #tabItem> Tab #2 </div>
-      <div [attr.data-tab]="'tab 3'" #tabItem> Tab #3 </div>
+      <div [attr.data-tab]="'tab 1'" #tabItem>Tab #1</div>
+      <div [attr.data-tab]="'tab 2'" #tabItem>Tab #2</div>
+      <div [attr.data-tab]="'tab 3'" #tabItem>Tab #3</div>
     </dui-tabs>
 
     <code [innerText]="tmpls['dui-tabs']"></code>
@@ -36,20 +44,30 @@
 
   <div class="col">
     <h1>check box</h1>
-    <dui-check-box [(value)]="valueBool" [title]="title"></dui-check-box>
-    <dui-check-box [(value)]="valueBool" [title]="title"></dui-check-box>
-    <dui-check-box [(value)]="valueBool" [title]="title"></dui-check-box>
+    <dui-check-box [(value)]="valueBool1" [title]="title"></dui-check-box>
+    <dui-check-box [(value)]="valueBool2" [title]="title"></dui-check-box>
+    <dui-check-box [(value)]="valueBool3" [title]="title"></dui-check-box>
 
     <code [innerText]="tmpls['dui-check-box']"></code>
   </div>
 
   <div class="col">
     <h1>switch box</h1>
-    <dui-switch-box [data]="selectList" (value)="debug($event)" [title]="title"></dui-switch-box>
+    <dui-switch-box
+      [data]="selectList"
+      (value)="debug($event)"
+      [title]="title"
+    ></dui-switch-box>
 
     <code [innerText]="tmpls['dui-switch-box']"></code>
   </div>
 
-  <div class="col"> </div>
+  <div class="col">
+    <h1>ajax</h1>
+    <button (click)="actionClick()">Demo</button>
 
+    <code [innerText]="tmpls['ajax']"></code>
+  </div>
+
+  <div class="col"></div>
 </div>

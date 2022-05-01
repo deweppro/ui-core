@@ -1,7 +1,16 @@
 <div class="dui-check-box__container">
   <div class="dui-check-box__container-button click" (click)="toggle(!value)">
-    <div [ngClass]="{'dui-check-box__container-button--on': value, 'dui-check-box__container-button--off': !value }">
-    </div>
+    <div
+      [ngClass]="{
+        'dui-check-box__container-button--on': value,
+        'dui-check-box__container-button--off': !value
+      }"
+    ></div>
   </div>
-  <span class="dui-check-box__container-title" [title]="title" *ngIf="title.length > 0">{{title}}</span>
+  <span
+    class="dui-check-box__container-title"
+    [title]="title"
+    *ngIf="title.length > 0"
+    >{{ title }}</span
+  >
 </div>

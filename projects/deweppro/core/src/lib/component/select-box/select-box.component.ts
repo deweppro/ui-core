@@ -1,12 +1,18 @@
-import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  HostListener,
+  Input,
+  OnInit,
+  Output,
+} from '@angular/core';
 
 @Component({
   selector: 'dui-select-box',
   templateUrl: './select-box.component.html',
-  styleUrls: ['./select-box.component.css']
+  styleUrls: ['./select-box.component.css'],
 })
 export class SelectBoxComponent implements OnInit {
-
   _popup = false;
 
   @Input() title: string = '';
@@ -24,13 +30,11 @@ export class SelectBoxComponent implements OnInit {
     this._popup = false;
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   setValue(key: string): void {
     this.filter = key;
     this.key.emit(key);
     this.value.emit(this.data[key]);
   }
-
 }

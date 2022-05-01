@@ -1,15 +1,20 @@
 import { Component } from '@angular/core';
+import { RequestService } from '@deweppro/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'text text text text text text text text text text text text text text';
-  valueText = 'text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text';
+  title =
+    'text text text text text text text text text text text text text text';
+  valueText =
+    'text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text';
   valueNum = '621';
-  valueBool = false;
+  valueBool1 = false;
+  valueBool2 = false;
+  valueBool3 = false;
   regex = new RegExp('[^0-9]', 'gi');
 
   selectList: { [title: string]: any } = {
@@ -27,7 +32,7 @@ export class AppComponent {
     'text 12': false,
     'text 13': false,
     'text 14': false,
-  }
+  };
   selectDefault = '2';
 
   tmpls: { [key: string]: string } = {
@@ -45,10 +50,27 @@ export class AppComponent {
     'dui-switch-box': `data = { [title: string]: any }
 
     <dui-switch-box [title] [data] (key) (value)></dui-switch-box>`,
-  }
+    ajax: `constructor(private rs: RequestService) {}
+
+    actionClick() {
+        this.rs.get("/assets/demo.json").subscribe((v: DemoMessage) => alert(v.msg));
+    }
+    `,
+  };
+
+  constructor(private rs: RequestService) {}
 
   debug(msg: any): void {
     console.log(msg);
   }
+
+  actionClick() {
+    this.rs
+      .get(`/assets/demo.json`)
+      .subscribe((v: DemoMessage) => alert(v.msg));
+  }
 }
 
+export class DemoMessage {
+  msg!: string;
+}

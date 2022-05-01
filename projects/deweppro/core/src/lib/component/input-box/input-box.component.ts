@@ -3,10 +3,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 @Component({
   selector: 'dui-input-box',
   templateUrl: './input-box.component.html',
-  styleUrls: ['./input-box.component.css']
+  styleUrls: ['./input-box.component.css'],
 })
 export class InputBoxComponent implements OnInit {
-
   @Input() title: string = '';
   @Input() regex?: RegExp;
   @Input() value: string = '';
