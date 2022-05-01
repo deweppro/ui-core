@@ -11,7 +11,7 @@ import { TextViewComponent } from './component/text-view/text-view.component';
 import { KeyGetterPipe, KeysFilterPipe } from './pipe/filters.pipe';
 import { RTLPipe } from './pipe/validators.pipe';
 import { ErrorInterceptor } from './service/error.interceptor';
-import { RequestService } from './service/request.service';
+import { API_PREFIX, RequestService } from './service/request.service';
 
 @NgModule({
   declarations: [
@@ -40,11 +40,12 @@ import { RequestService } from './service/request.service';
   schemas: [],
 })
 export class DuiCoreModule {
-  static forRoot(): ModuleWithProviders<DuiCoreModule> {
+  static forRoot(domain?: string): ModuleWithProviders<DuiCoreModule> {
     return {
       ngModule: DuiCoreModule,
       providers: [
         { provide: RequestService },
+        { provide: API_PREFIX, useValue: domain || '' },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
       ],
     };

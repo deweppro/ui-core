@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiPrefix: 'https://deweppro.github.io/ui-core',
 };

@@ -20,3 +20,9 @@ build_demo:
 	rm -rf ./docs
 	mkdir ./docs
 	cp -r ./dist/ui-core/. ./docs/
+
+build_lib:
+	npm run build-lib
+
+run:
+	npm run start

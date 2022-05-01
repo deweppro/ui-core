@@ -1,17 +1,24 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Inject, Injectable, InjectionToken } from '@angular/core';
 import { Observable } from 'rxjs';
 import { take } from 'rxjs/operators';
+
+export const API_PREFIX = new InjectionToken<string>('API_PREFIX');
 
 @Injectable({
   providedIn: 'root',
 })
 export class RequestService {
-  constructor(protected http: HttpClient) {}
+  constructor(
+    @Inject(API_PREFIX) private prefix: string,
+    private http: HttpClient
+  ) {
+    this.prefix = this.trimChar(this.prefix, '/') + '/';
+  }
 
   get(url: string, data?: object): Observable<any> {
     return this._observable(
-      this.http.get<any>(this._query(url, data), {
+      this.http.get<any>(this._query(this._uri(url), data), {
         headers: this._headers(data),
       })
     );
@@ -19,22 +26,28 @@ export class RequestService {
 
   post(url: string, data: object): Observable<any> {
     return this._observable(
-      this.http.post<any>(url, data, { headers: this._headers(data) })
+      this.http.post<any>(this._uri(url), data, {
+        headers: this._headers(data),
+      })
     );
   }
 
   put(url: string, data: object): Observable<any> {
     return this._observable(
-      this.http.put<any>(url, data, { headers: this._headers(data) })
+      this.http.put<any>(this._uri(url), data, { headers: this._headers(data) })
     );
   }
 
   delete(url: string, data?: object): Observable<any> {
     return this._observable(
-      this.http.delete<any>(this._query(url, data), {
+      this.http.delete<any>(this._query(this._uri(url), data), {
         headers: this._headers(data),
       })
     );
+  }
+
+  private _uri(v: string): string {
+    return this.prefix + this.trimChar(v, '/');
   }
 
   private _observable(obs: Observable<any>): Observable<any> {
@@ -67,5 +80,14 @@ export class RequestService {
       head = head.set('Content-Type', 'application/json');
     }
     return head;
+  }
+
+  private trimChar(v: string, ch: string): string {
+    let start = 0,
+      end = v.length;
+
+    while (start < end && v[start] === ch) ++start;
+    while (end > start && v[end - 1] === ch) --end;
+    return start > 0 || end < v.length ? v.substring(start, end) : v;
   }
 }
