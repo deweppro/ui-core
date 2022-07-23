@@ -11,7 +11,7 @@ import { EMPTY, Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
 @Injectable()
-export class ErrorInterceptor implements HttpInterceptor {
+export class ErrorPageInterceptor implements HttpInterceptor {
   constructor(private router: Router) {}
 
   intercept(

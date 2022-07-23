@@ -11,5 +11,5 @@ export * from './lib/component/text-view/text-view.component';
 export * from './lib/dui-core.module';
 export * from './lib/pipe/filters.pipe';
 export * from './lib/pipe/validators.pipe';
-export * from './lib/service/error.interceptor';
+export * from './lib/service/error-page-interceptor.service';
 export * from './lib/service/request.service';
